@@ -1,0 +1,152 @@
+<html>
+<head>
+	<meta name="author" content="Miguel Trujillo Navarro">
+	<meta charset="utf-8"/>
+	<meta name="keywords" content="HTML, Space, Science, Ciencia, Espacio, Cosmos, Telescopio">
+	<meta name="description" content="Web sobre todo lo relacionado con el espacio.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="language" content="ES">
+	<meta name="date" content="10/12/2018">
+	<title>EL cosmos</title>
+	<link rel="icon" href="imagenes/icono.png" type="imagenes/png">
+	<link rel="stylesheet"  href="general.css" type="text/css">
+	<style>
+		#asteroidejuego{
+            background-image: url(imagenes/asteriod.gif);
+            background-repeat: no-repeat;
+            height: 250px;
+            width: 250px;
+            background-position-x: 50%;
+            background-position-y: 50%;
+            background-size: 150px 150px;
+            position: relative;
+            margin-left: 0%;
+            margin-right: 0%;
+            border-radius: 50%;
+            animation: muevete 17s alternate infinite;
+			float: left;
+            
+            
+        }
+        #asteroidejuego:active{
+            background-image: url(imagenes/explosion.gif);
+            
+            
+        }
+        
+        @keyframes muevete{
+            0% {
+                transform: translate3d(0, 0, 0);
+                animation-timing-function: ease-in;
+            }
+            10% {
+                transform: translate3d(900px, 213px, 0px);
+                animation-timing-function: ease-out;
+            }
+            20% {
+                transform: translate3d(0px, 300px, 0px);
+                animation-timing-function: ease-out;
+            }
+            30% {
+                transform: translate3d(900px,1px, 0px);
+                animation-timing-function: ease-out;
+            }
+            40% {
+                transform: translate3d(12px, 500px, 0px);
+                animation-timing-function: ease-out;
+            }
+            50% {
+                transform: translate3d(832px, 212px, 0px);
+                animation-timing-function: ease-out;
+            }
+            60% {
+                transform: translate3d(0px,34px, 0px);
+                animation-timing-function: ease-out;
+            }
+            70% {
+                transform: translate3d(900px, 110px, 0px);
+                animation-timing-function: ease-out;
+            }
+            80% {
+                transform: translate3d(-100px, 340px, 0px);
+                animation-timing-function: ease-out;
+            }
+            90% {
+                transform: translate3d(700px, 456px, 0px);
+                animation-timing-function: ease-out;
+            }
+            100% {
+                transform: translate3d(12px, 400px, 0px);
+            }
+
+        }
+		#contador{
+			background-image: url(imagenes/metal.jpg); 
+			height:50px;
+			width: 600px;
+			margin-left: 20%;
+			font-size: 10px;
+			border-bottom-left-radius: 100%;
+			border-bottom-right-radius: 100%;
+			animation: brillacont 3s alternate infinite;
+			
+		}
+		@keyframes brillacont{
+			from{box-shadow:0px red;}
+			to{box-shadow: 0 7px 0 0 red}
+
+		}
+		#reset{
+			border-radius: 50%;
+			border: red 2px solid;
+			text-decoration: none;
+			color: black;
+			font-size: 12px;
+			
+			font-weight: 500;
+			background-color: red;
+			margin-top: 25px;
+			margin-left: 18%;
+			position: absolute;
+
+		}
+		
+	</style>
+	<script>
+		function puntua(n){
+				
+				var valor=document.getElementById("puntos");
+				
+
+				if(valor.value<1000){
+					var suma=(parseInt(n)+parseInt(valor.value));
+					var total=document.getElementById("puntos").value=suma;
+					
+				}else{
+					prompt("¡GANASTE!");
+				}
+				
+
+		}
+		function pierdevida(){
+			var vidas=document.getElementById("vidas");
+
+			if(vidas.value>0){
+				vidas.value-=parseInt(1);
+				
+			}else{
+				prompt("¡PERDISTE!");
+			}
+			
+		}
+		function resetear(){
+			location.reload(true);
+		}
+	</script>
+</head>
+<body onclick="pierdevida()">
+	<div id="contador"><a id="reset" href="javascript:resetear()">RESET</a><label for="vidas">VIDAS</label><input type="number" width="50px" id="vidas" value="10" disabled> <label for="puntos">PUNTOS:</label><input type="number" id="puntos" value="0" disabled></div>
+	<div id="contenedor"><a ondragenter="puntua(10)" href="javascript:puntua(10)" id="asteroidejuego" ></a></div>
+	
+</body>
+</html>

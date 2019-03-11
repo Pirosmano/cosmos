@@ -1,0 +1,374 @@
+<html>
+<head>
+	<meta name="author" content="Miguel Trujillo Navarro">
+	<meta charset="utf-8"/>
+	<meta name="keywords" content="HTML, Space, Science, Ciencia, Espacio, Cosmos, Telescopio">
+	<meta name="description" content="Web sobre todo lo relacionado con el espacio.">
+	<meta name="language" content="ES">
+	<meta name="date" content="10/12/2018">
+	<title>EL cosmos</title>
+    <link rel="icon" href="imagenes/icono.png" type="imagenes/png">
+    <style>
+        html{
+            cursor: url(imagenes/Sentinelnormal.cur),pointer;
+            background-image: url(imagenes/fondoazul.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+			text-align: center;
+			font-family: cursive;
+        }
+        ::-webkit-scrollbar{
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track{
+            background-image: url(imagenes/acroll.png);
+        }
+        ::-webkit-scrollbar-thumb{
+            background: aqua;
+            width: 10px;
+            border-radius: 100%;
+            box-shadow: 0px 0px 20px 20px aqua;
+        }
+        
+        
+        body{
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            float: left;
+            
+
+        }
+        #cabecera{
+            width: 90%;
+            margin-left:-47%; 
+            position: absolute;
+        }
+        #cuerpo{
+            width: 100%;
+			
+        }
+        #cuerpo iframe{
+            border: 4px solid rgba(0, 238, 255, 0.685);
+            box-shadow: 5px 5px 40px 40px rgba(9, 199, 233, 0.644);
+            animation: brilla 5s alternate infinite;
+			margin-top:10%;
+        }
+        #menudiv{
+            position: absolute;
+            float: left;
+            margin-top: 15%;
+            margin-left: 5%;
+        }
+        #audio{
+            position: absolute;
+            margin-top: 1%;
+            margin-left: 1%;
+            border: 4px outset rgba(12, 12, 129, 0.685);
+            border-radius: 50%;
+            color: blue;
+        }
+        #Titulo{
+            position: absolute;
+            margin-left: 25%;
+            margin-top: 6%;
+            background-image:  url(imagenes/fondo.jpg) ;
+            border-radius: 50%;
+            border: 4px outset rgba(12, 12, 129, 0.685);
+    
+        }
+        #titulo:hover{
+            filter: invert(100%);
+            transition: filter 1s linear;
+            border: 4px inset;
+            animation: brilla 3s alternate infinite;
+
+        }
+        @keyframes brilla{
+            from{box-shadow: 0px 0px 0px 0px aqua;}
+            to{box-shadow: 5px 5px 40px 40px aqua;}
+        }
+        #cuerpo{
+            margin-top: 23%;
+            
+            
+        }
+
+        #registros{
+            float: right;
+            margin-top: 1%;
+            margin-right: 1%;
+        }
+        /**botones**/
+        .boton{
+            
+            border: 2px outset rgba(12, 12, 129, 0.685);
+            background-image: url(imagenes/botones.png) ;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 20px;
+            color: aqua;
+            padding: 10px;
+            border-radius: 50%;
+            margin-left: 40%;
+            margin-top: 0%;
+            position: absolute;
+        }
+        .boton:hover{
+            background-image: url(imagenes/botones.png) ;
+            animation: boton 0.8s alternate infinite;
+        }
+        @keyframes boton{
+            from{filter: brightness(100%);}
+            to{filter: brightness(200%);}
+        }
+        #inicia{
+            margin-left: 31%;
+        }
+        /**menu**/
+		#menudiv{
+			margin-left:55%;
+			margin-top:21%;
+		}
+        #menu ul {
+            list-style:none;
+            
+            padding:0;
+			
+            
+        }
+        #menu ul li {
+            border: 2px outset rgba(12, 12, 129, 0.685);
+            background-image: url(imagenes/fondo.jpg) ;
+            width: 250%;
+        }
+        #menu ul a {
+            display:block;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 40px;
+            color: aqua;
+            padding: 10px;
+            
+        }
+        #menu ul img {
+            filter:brightness(180%);
+        }
+        #menu ul li {
+            position:relative;
+            float:left;
+            margin:0;
+            padding:0;
+            border-radius: 50%;
+        }
+        #menu ul li:hover {
+            filter: invert(100%);
+            transition: filter 0.6s linear;
+        }
+        /**para que despliegue el menu**/
+        #menu ul ul {
+            display:none;
+            position: absolute;
+            top:100%;
+            left:0;
+            padding:0;
+            
+        }
+        #menu ul ul li {
+            float:none;
+            width:250px;
+            margin-left: 18%;
+        }
+        #menu ul ul a {
+            line-height:120%;
+            padding:10px 15px;
+        }
+        #menu ul li:hover > ul {
+            display:block;
+            filter: invert(100%);
+            
+        }
+        #contacto{
+            background-image: url(imagenes/agujerito.png);
+            height: 200px;
+            width: 600px;
+            animation: agujero 5s alternate infinite;
+        }
+        @keyframes agujero{
+            from{margin-left: 0%;}
+            to{margin-left: 60%;}
+        }
+        #contacto p{
+            float: left;
+            position: absolute;
+            margin-left: 15%;
+            margin-top: 7%;
+            color: orangered;
+            border: 2px orange dotted;
+            border-top-right-radius: 60%;
+            font-size: 20;
+            
+
+        }
+        #contacto a{
+            float: left;
+            position: absolute;
+            margin-left: 1%;
+            margin-top: 7%;
+            color: orangered;
+            text-decoration: none;
+            border: 2px orange dotted;
+            border-top-left-radius: 60%;
+            font-size: 20;
+
+        }
+        #pie{
+            float: left;
+            position: relative;
+            width: 90%;
+            
+        }
+        #copyright{
+            margin-left: 60%;
+        }
+        #asteroidejuego{
+            background-image: url(imagenes/asteriod.gif);
+            background-repeat: no-repeat;
+            height: 100px;
+            width: 100px;
+            background-position-x: 50%;
+            background-position-y: 50%;
+            background-size: 100px 100px;
+            position: absolute;
+            margin-left: 0%;
+            margin-right: 0%;
+            border-radius: 50%;
+            animation: muevete 15s alternate infinite;
+            
+            
+        }
+        #asteroidejuego:active{
+            
+            background-image: url(imagenes/explosion.gif);
+            
+            
+        }
+        
+        @keyframes muevete{
+            0% {
+                transform: translate3d(0, 0, 0);
+                animation-timing-function: ease-in;
+            }
+            10% {
+                transform: translate3d(100px, 200px, 0px);
+                animation-timing-function: ease-out;
+            }
+            20% {
+                transform: translate3d(125px, 22px, 0px);
+                animation-timing-function: ease-out;
+            }
+            30% {
+                transform: translate3d(345px, 224px, 0px);
+                animation-timing-function: ease-out;
+            }
+            40% {
+                transform: translate3d(234px, 250px, 0px);
+                animation-timing-function: ease-out;
+            }
+            50% {
+                transform: translate3d(500px, 243px, 0px);
+                animation-timing-function: ease-out;
+            }
+            60% {
+                transform: translate3d(432px, 100px, 0px);
+                animation-timing-function: ease-out;
+            }
+            70% {
+                transform: translate3d(-300px, 0px, 0px);
+                animation-timing-function: ease-out;
+            }
+            80% {
+                transform: translate3d(450px, 234px, 0px);
+                animation-timing-function: ease-out;
+            }
+            90% {
+                transform: translate3d(-500px, 250px, 0px);
+                animation-timing-function: ease-out;
+            }
+            100% {
+                transform: translate3d(-432px, 40px, 0px);
+            }
+
+        }
+        
+        
+    </style>
+    <script>
+        //Para cambiar de pagina
+        function inicio(){
+            document.getElementById("iframe").setAttribute("src","https://spacenews.com/");
+        }
+        function iniciaSesion(){
+            document.getElementById("iframe").setAttribute("src","iniciaSesion.html");
+        }
+        function iniciaRegistro(){
+            document.getElementById("iframe").setAttribute("src","registrate.html");
+        }
+        function iniciaEspacio(){
+            document.getElementById("iframe").setAttribute("src","espacio.html");
+        }
+        function iniciaCiencia(){
+            document.getElementById("iframe").setAttribute("src","ciencia.html");
+        }
+        function iniciaTienda(){
+            document.getElementById("iframe").setAttribute("src","tienda.html");
+        }
+        function iniciaJuego(){
+            document.getElementById("iframe").setAttribute("src","juego.html");
+        }
+
+    </script>
+</head>
+<body onload="inicio()">
+    <a href="javascript:iniciaJuego()" id="asteroidejuego"></a>
+    
+    <div id="cabecera">
+		<audio controls autoplay loop id="audio"><source src="audio/space-oddity.mp3" type="audio/mp3"><p>Si estas leyendo esto es que tu navegador no soporta audio :(.</p></audio>
+               <div id="registros"><a class="boton" id="Inicia" href="javascript:iniciaSesion()">ACCEDE</a> <a class="boton" id="Registro" href="javascript:iniciaRegistro()">REGISTRATE</a></div> 
+            
+                <a id="Titulo" onclick="inicio()"><img src="imagenes/titulo.png"></a>
+                    <div id="menudiv"> 
+                        <nav id="menu">
+                            <ul>
+                                <li><a href="">MENÚ</a>
+                                    <ul>
+                                        <li><a onclick="inicio()"><img src="imagenes/inicio.png"></a></li>
+                                        <li><a onclick="iniciaEspacio()"><img src="imagenes/espacio.png"></a></li>
+                                        <li><a onclick="iniciaCiencia()"><img src="imagenes/ciencia.png"></a></li>
+                                        <li><a onclick="iniciaTienda()"><img src="imagenes/tienda.png"></a></li>
+                                    </ul>
+                                </li>   
+                            </ul> 
+                        </nav>
+                    </div> 
+          
+	<!--<table height="100" width="90%" background="imagenes/textohtml.png"><th><font size="5" width="80%">Bienvenido,amante del espacio y de lo desconocido, en esta web encontrarás un lugar lleno de respuestas
+	a los enigmas que el espacio guarda en su inmensa capacidad, las noticias mas interesantes relacionadas con el espacio
+        y lo desconocido.</font></th></table>-->
+    </div>
+    <div id="cuerpo">
+            <iframe id="iframe" height="600"  width="100%" scrolling="yes" ></iframe>
+    </div>
+    <footer id="pie">
+        <div id="contacto">
+                <p>Contactanos: </p><a href="mailto:administracion@elcosmos.es"> administracion@elcosmos.es</a>
+        </div>
+        <div id="copyright">
+                <font color="#00ccff" >Copyright Diciembre 2018 por Miguel Trujillo Navarro.</font>
+        </div>
+    </footer>
+
+</body>
+</html>

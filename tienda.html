@@ -1,0 +1,174 @@
+<html>
+<head>
+	<meta name="author" content="Miguel Trujillo Navarro">
+	<meta charset="utf-8"/>
+	<meta name="keywords" content="HTML, Space, Science, Ciencia, Espacio, Cosmos, Telescopio">
+	<meta name="description" content="Web sobre todo lo relacionado con el espacio.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="language" content="ES">
+	<meta name="date" content="10/12/2018">
+	<title>EL cosmos</title>
+	<link rel="icon" href="imagenes/icono.png" type="imagenes/png">
+	<link rel="stylesheet"  href="general.css" type="text/css">
+		<script>
+			function añadir(precio,cantidad,objeto){
+				var preciouno=document.getElementById(precio).value;
+				var cantidaduno=document.getElementById(cantidad).value;
+				var valor=document.getElementById("total").value;
+				var suma=(parseInt(preciouno)+parseInt(valor))*parseInt(cantidaduno);
+				var total=document.getElementById("total").value=suma;
+				var contador=parseInt(0);
+				var can=parseInt(cantidad);
+				
+					
+					var x = document.getElementById("lista");
+					var option = document.createElement("option");
+					option.text = objeto;
+					x.add(option);
+					contador++;
+				
+				
+				
+
+			}
+		</script>
+</head>
+<body >
+	<style>
+		#titulo{
+			background-image: url(imagenes/nebulosa.png);
+			background-repeat: no-repeat;
+			background-position-x: 50%;
+			background-position-y: 50%;
+			height: 300px;
+			font-size: 80px;
+			animation: brillibrilli 4s alternate infinite;
+			color: rgb(0, 97, 97);
+			font-weight: 500;
+		}	
+		@keyframes brillibrilli{
+			from{filter: brightness(80%);}
+			to{filter: brightness(200%);}
+		}
+		table{
+			margin-top: 2%;
+			float: left;
+			width: 70%;
+		}
+		table th{
+			background-image: url(imagenes/nebulosa.png);
+			background-position-x: 50%;
+			background-position-y: 50%;
+			background-size: 200px 100px;
+			height: 100px;
+			background-repeat: no-repeat;
+			color: rgb(0, 93, 231);
+
+		}
+
+		#carrito{
+			background-image: url(imagenes/carritofondo.png);
+			background-size: 510px 260px;
+			background-repeat: no-repeat;
+			background-position-x: 50%;
+			background-position-y: 50%;
+			width: 500px;
+			height: 250px;
+			font-size: 20px;
+			font-weight: 300;
+			color: aqua;
+			margin-left: 60%;
+			margin-top: 1%;
+			position: fixed;
+			
+			
+		}
+		
+		#carrito div{
+			margin-left: 10%;
+			margin-top: 15%;
+			
+			width: 400px;
+			height: 150;
+			text-align: center;
+			position: absolute;
+			
+		}
+		#carrito div label select{
+			position: absolute;
+			float:left;
+			margin-right:10%;
+			
+		}
+		#carrito div p{
+			float: left;
+			margin-top: 6%;
+			margin-left: 25%;
+			position: absolute;
+			
+		}
+		#carrito div input{
+			position: absolute;
+			float: left;
+			margin-top: 11.5%;
+			margin-left: -30%;
+			
+		}
+		#carrito div a{
+			float: left;
+			position: absolute;
+			margin-top: 20%;
+			margin-left: -34%;
+			
+		}
+		#añade:hover{
+			animation: brilla 0.8s alternate;
+			filter: brightness(200%); 
+
+		}
+		#compra:hover{
+			animation: brilla 0.8s alternate;
+			filter: brightness(200%); 
+		}
+		@keyframes brilla{
+			from{filter: brightness(100%);}
+			to{filter: brightness(200%);}
+		}
+		img{
+			border-radius: 25%;
+		}
+
+	</style>
+	<div id="fondocarro"></div>
+	<div id="carrito">
+		
+		<div>
+		<label id="nombcarrito">CARRITO</label>
+		<select id="lista">
+			<option value="Productos">Productos</option>
+		</select>
+		<p>Total:</p><input id="total" type="number" value="0" disabled>
+		<a id="compra" href="graciasr.html"><img name="comprar" src="imagenes/comprar.png"></a>
+		</div>
+	</div>
+	<table>
+	<thead>
+	<tr><th colspan="4" id="titulo">TIENDA</th></tr>
+	<tr><th>IMAGEN</th><th>PRODUCTO</th><th>PRECIO</th><th>CARRITO</th></tr>
+	</thead>
+	<tbody >
+	
+		<tr><td><img src="tienda/telescopio1.jpg" title="celeston" width="200" height="200"></td><td>Celestron AstroMaster 130EQ-MD - Telescopio con motor para seguimiento automático, azul </td><td><input type="number" value="275" id="precio" disabled></td><td><label for="cantidad">Cantidad</label>	<input type="number" value="1" min="0" max="100" id="cantidad"><br><br><!-- cambiar a botones cuando pueda meter css >>> --><a id="añade" href="javascript:añadir('precio','cantidad','AstroMaster')"><img name="añadir" src="imagenes/carrito.png"></a> <a id="compra" href="graciasr.html"><img name="comprar" src="imagenes/comprar.png"></a> </td></tr>
+		<tr><td><img src="tienda/telescopio2.jpg" title="uverbon" width="200" height="200"></td><td>Telescopio Astronómico Zoom HD al Aire Libre Monocular Espacio Telescopio con Trípode Telescopio terrestre para Niños, Principiantes - Uverbon</td><td><input type="number" value="29" id="precio1" disabled></td><td><label for="cantidad1">Cantidad</label>	<input type="number" value="1" min="0" max="100" id="cantidad1"><br><br><!-- cambiar a botones cuando pueda meter css >>> --><a id="añade" href="javascript:añadir('precio1','cantidad1','Uverbon')"><img name="añadir" src="imagenes/carrito.png"></a> <a id="compra" href="graciasr.html"><img name="comprar" src="imagenes/comprar.png"></a> </td></tr>
+		<tr><td><img src="tienda/telescopio3.jpg" title="svbony" width="200" height="200"></td><td>Svbony SV25 Telescopio Astronómico Zoom 420/60mm Terrestre con Trípode para Astrónomos y Niños Ideal para los Principantes (Blanco)</td><td><input type="number" value="65" id="precio2" disabled></td><td><label for="cantidad2">Cantidad</label>	<input type="number" value="1" min="0" max="100" id="cantidad2"><br><br><!-- cambiar a botones cuando pueda meter css >>> --><a id="añade" href="javascript:añadir('precio2','cantidad2','Svbony')"><img name="añadir" src="imagenes/carrito.png"></a> <a id="compra" href="graciasr.html"><img name="comprar" src="imagenes/comprar.png"></a> </td></tr>
+		<tr><td><img src="tienda/telescopio4.jpg" title="geertop" width="200" height="200"></td><td>Geertop Telescopio refractor astronómico de alta calidad ultra claro con trípode de mesa y buscador, 400x70mm, para astrónomos principiantes y adolescentes </td><td> <input type="number" value="70" id="precio3" disabled></td><td><label for="cantidad3">Cantidad</label>	<input type="number" value="1" min="0" max="100" id="cantidad3"><br><br><!-- cambiar a botones cuando pueda meter css >>> --><a id="añade" href="javascript:añadir('precio3','cantidad3','Geertop')"><img name="añadir" src="imagenes/carrito.png"></a> <a id="compra" href="graciasr.html"><img name="comprar" src="imagenes/comprar.png"></a> </td></tr>
+		<tr><td><img src="tienda/telescopio5.jpg" title="celestront" width="200" height="200"></td><td>Celestron Travel Scope 50 - Telescopio portable con ampliación de 18x, longitud focal 36 cm, color negro, abertura de 50 mm</td><td><input type="number" value="65" id="precio4" disabled></td><td><label for="cantidad4">Cantidad</label>	<input type="number" value="1" min="0" max="100" id="cantidad4"><br><br><!-- cambiar a botones cuando pueda meter css >>> --><a id="añade" href="javascript:añadir('precio4','cantidad4','Travel')"><img name="añadir" src="imagenes/carrito.png"></a> <a id="compra" href="graciasr.html"><img name="comprar" src="imagenes/comprar.png"></a> </td></tr>
+		<tr><td><img src="tienda/telescopio6.jpg" title="igpg" width="200" height="200"></td><td>IGPG Reflejando el telescopio Fz77-92 de Newton, Estrellas observables, Luna, Saturno, Júpiter, Nebulosa </td><td> <input type="number" value="409" id="precio5" disabled></td><td><label for="cantidad5">Cantidad</label>	<input type="number" value="1" min="0" max="100" id="cantidad5"><br><br><!-- cambiar a botones cuando pueda meter css >>> --><a id="añade" href="javascript:añadir('precio5','cantidad5','IGPG')"><img name="añadir" src="imagenes/carrito.png"></a> <a id="compra" href="graciasr.html"><img name="comprar" src="imagenes/comprar.png"></a> </td></tr>
+		
+		
+	</tbody>
+	
+	</table>
+	
+</body>
+</html>
